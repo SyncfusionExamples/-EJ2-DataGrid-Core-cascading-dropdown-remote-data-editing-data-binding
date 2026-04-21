@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "WYLWqT2PZ/0=",
+  "success": true,
+  "projectFilePath": "C:\\git\\-EJ2-DataGrid-Core-cascading-dropdown-remote-data-editing-data-binding\\Cascading-dropdown-remote-data\\filter_core\\filter_core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SivaranjaniRajasekar\\.nuget\\packages\\microsoft.extensions.ai.abstractions\\9.9.1\\microsoft.extensions.ai.abstractions.9.9.1.nupkg.sha512",
+    "C:\\Users\\SivaranjaniRajasekar\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\SivaranjaniRajasekar\\.nuget\\packages\\syncfusion.ej2.aspnet.core\\33.1.44\\syncfusion.ej2.aspnet.core.33.1.44.nupkg.sha512",
+    "C:\\Users\\SivaranjaniRajasekar\\.nuget\\packages\\syncfusion.licensing\\33.1.44\\syncfusion.licensing.33.1.44.nupkg.sha512"
+  ],
+  "logs": []
+}
