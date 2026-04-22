@@ -1,6 +1,6 @@
-## ASP.NET Core DataGrid – Cascading Dropdown Editing with Remote Data
+# ASP.NET Core DataGrid – Cascading Dropdown Editing with Remote Data
 
-### Repository Description
+## Repository Description
 
 This repository demonstrates how to implement cascading dropdown editors with remote data binding inside an ASP.NET Core DataGrid during inline editing scenarios.
 
