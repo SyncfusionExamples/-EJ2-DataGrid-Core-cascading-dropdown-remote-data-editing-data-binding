@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using filter_core.Models;
 using Syncfusion.EJ2.Base;
+ using System.Text.Json;
 
 namespace TestSample.Controllers
 {
@@ -21,27 +22,30 @@ namespace TestSample.Controllers
             ViewBag.DataSource = Order;
             
             return View();
-        }
+        }   
 
-        
-        public IActionResult StateDataSource([FromBody]ExtendedDataManager dm)
+public IActionResult StateDataSource([FromBody] ExtendedDataManager dm)
+{
+    var states = States.getStates();
+
+    int countryId = 0;
+
+    if (dm.Where != null && dm.Where.Count > 0)
+    {
+        var jsonValue = (JsonElement)dm.Where[0].value;
+
+        if (jsonValue.ValueKind == JsonValueKind.Number)
         {
-
-            var state = States.getStates();
-            
-            var Data = state.ToList();
-            int count = state.Count();
-
-
-            List<States> iterateState= new List<States>();
-            foreach (States st in state) {
-                if (st.countryId == (Int64)dm.Where[0].value) {
-                    iterateState.Add(st);
-                }
-            }            
-            return dm.RequiresCounts ? Json(new { result = Data.Skip(dm.Skip).Take(dm.Take), count = count }) : Json(iterateState.ToList());
+            countryId = jsonValue.GetInt32(); // or GetInt64()
         }
+    }
 
+    var filteredStates = states
+        .Where(st => st.countryId == countryId)
+        .ToList();
+
+    return Json(filteredStates);
+}
         public IActionResult CountryDataSource([FromBody]ExtendedDataManager dm)
         {
 
