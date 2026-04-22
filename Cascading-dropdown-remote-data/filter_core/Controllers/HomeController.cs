@@ -22,29 +22,7 @@ namespace TestSample.Controllers
             ViewBag.DataSource = Order;
             
             return View();
-        }
-
-        
-        // public IActionResult StateDataSource([FromBody]ExtendedDataManager dm)
-        // {
-
-        //     var state = States.getStates();
-            
-        //     var Data = state.ToList();
-        //     int count = state.Count();
-
-
-        //     List<States> iterateState= new List<States>();
-        //     foreach (States st in state) {
-        //         if (st.countryId == (Int64)dm.Where[0].value) {
-        //             iterateState.Add(st);
-        //         }
-        //     }            
-        //     return dm.RequiresCounts ? Json(new { result = Data.Skip(dm.Skip).Take(dm.Take), count = count }) : Json(iterateState.ToList());
-        // }
-
-
-   
+        }   
 
 public IActionResult StateDataSource([FromBody] ExtendedDataManager dm)
 {
